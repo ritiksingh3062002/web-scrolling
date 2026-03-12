@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMCON Real Estate Developers - Building Dreams, Building Homes</title>
+<meta name="description" content="OMCON Real Estate Developers - Building Dreams, Building Homes For 1st Time Home Owners. Discover premier properties in Karanjade.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--orange:#F26522;--dark:#1a1a2e;--navy:#0a1628;--text:#333;--light-gray:#f5f5f5;--white:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+/* TOP BAR */
+.top-bar{background:var(--white);padding:8px 0;font-size:13px;border-bottom:1px solid #eee}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center}
+.top-bar .social a{margin-left:12px;color:#333;font-size:14px;transition:color .3s}
+.top-bar .social a:hover{color:var(--orange)}
+/* NAVBAR */
+.navbar{background:var(--white);padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;letter-spacing:1px}
+.logo span{color:var(--orange)}
+.logo small{display:block;font-size:9px;font-weight:500;letter-spacing:3px;color:#666;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;transition:color .3s;position:relative}
+.nav-links a:hover{color:var(--orange)}
+.nav-phone{font-weight:700;font-size:14px;color:var(--dark)}
+.btn-enquiry{border:2px solid var(--orange);color:var(--orange);padding:8px 22px;border-radius:4px;font-weight:600;font-size:14px;transition:all .3s;cursor:pointer;background:transparent}
+.btn-enquiry:hover{background:var(--orange);color:#fff}
+/* HERO */
+.hero{position:relative;height:600px;background:linear-gradient(135deg,#0a1628 0%,#1a2744 50%,#0a1628 100%);display:flex;align-items:center;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('images/hero_building.png') center/cover;opacity:.35}
+.hero-content{position:relative;z-index:2;color:#fff;max-width:650px;padding-left:60px}
+.hero-content h1{font-family:'Playfair Display',serif;font-size:52px;line-height:1.15;margin-bottom:20px}
+.hero-content h1 em{font-style:italic;color:var(--orange)}
+.hero-tabs{display:flex;gap:0;margin-top:30px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:8px;overflow:hidden}
+.hero-tabs .tab{padding:14px 28px;color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .3s}
+.hero-tabs .tab:hover,.hero-tabs .tab.active{background:var(--orange)}
+.hero-tabs .tab i{font-size:16px}
+/* TURNING DREAMS */
+.turning-dreams{padding:70px 0;background:var(--white)}
+.turning-dreams .container{display:flex;align-items:center;gap:50px}
+.turning-dreams .left{flex:1}
+.turning-dreams .right{flex:1}
+.section-label{color:var(--orange);font-size:14px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-label::before{content:'';width:30px;height:2px;background:var(--orange)}
+.turning-dreams h2{font-family:'Playfair Display',serif;font-size:38px;line-height:1.3;margin-bottom:15px}
+.turning-dreams h2 em{font-style:italic;color:var(--orange)}
+.turning-dreams p{color:#666;line-height:1.7;font-size:15px;margin-bottom:20px}
+.contact-pill{display:inline-flex;align-items:center;gap:15px;background:var(--light-gray);padding:12px 25px;border-radius:50px;margin-top:10px}
+.contact-pill i{color:var(--orange);font-size:18px}
+.contact-pill span{font-weight:700;font-size:16px;color:var(--orange)}
+/* FEATURED PROJECTS */
+.featured{padding:80px 0;background:var(--light-gray)}
+.featured .header{text-align:center;margin-bottom:50px}
+.featured h2{font-family:'Playfair Display',serif;font-size:38px}
+.featured h2 em{font-style:italic;color:var(--orange)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.project-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
+.project-card:hover{transform:translateY(-8px);box-shadow:0 12px 35px rgba(0,0,0,.15)}
+.project-card img{width:100%;height:220px;object-fit:cover}
+.project-card .info{padding:20px}
+.project-card h3{font-size:18px;font-weight:700;margin-bottom:5px}
+.project-card .type{color:var(--orange);font-size:13px;font-weight:600;margin-bottom:8px}
+.project-card .address{color:#888;font-size:13px;display:flex;align-items:center;gap:5px}
+.project-card .address i{color:var(--orange);font-size:12px}
+/* AFFORDABLE */
+.affordable{padding:80px 0;background:var(--white)}
+.affordable .container{display:flex;gap:50px;align-items:center}
+.affordable .left{flex:1}
+.affordable .right{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.affordable h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.3;margin-bottom:15px}
+.affordable h2 em{font-style:italic}
+.affordable p{color:#666;line-height:1.7;font-size:15px}
+.feature-box{background:var(--light-gray);padding:25px;border-radius:10px;text-align:center;transition:transform .3s}
+.feature-box:hover{transform:translateY(-5px)}
+.feature-box i{font-size:28px;color:var(--orange);margin-bottom:10px}
+.feature-box h4{font-size:14px;font-weight:600;margin-bottom:5px}
+.feature-box span{color:var(--orange);font-weight:700;font-size:16px}
+/* ON-TIME DELIVERY */
+.delivery{padding:80px 0;background:var(--light-gray)}
+.delivery .container{display:flex;gap:50px;align-items:center}
+.delivery .img-side{flex:1;border-radius:12px;overflow:hidden}
+.delivery .img-side img{width:100%;height:400px;object-fit:cover;border-radius:12px}
+.delivery .text-side{flex:1}
+.delivery h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.3;margin-bottom:20px}
+.delivery h2 em{font-style:italic;color:var(--orange)}
+.delivery p{color:#666;line-height:1.8;font-size:15px;margin-bottom:25px}
+.btn-explore{display:inline-flex;align-items:center;gap:8px;padding:12px 30px;border:2px solid var(--dark);color:var(--dark);font-weight:600;border-radius:4px;transition:all .3s}
+.btn-explore:hover{background:var(--dark);color:#fff}
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(rgba(10,22,40,.85),rgba(10,22,40,.85)),url('images/hero_building.png') center/cover;padding:50px 0;text-align:center;color:#fff}
+.cta-banner h3{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px}
+.cta-banner h3 strong{color:var(--orange)}
+.btn-tour{background:var(--orange);color:#fff;padding:14px 35px;border:none;border-radius:4px;font-size:15px;font-weight:600;cursor:pointer;transition:background .3s}
+.btn-tour:hover{background:#d4541a}
+/* HOME LOAN */
+.home-loan{padding:80px 0;background:var(--white)}
+.home-loan .container{display:flex;gap:50px;align-items:center}
+.home-loan .left{flex:1}
+.home-loan .right{flex:1;border-radius:12px;overflow:hidden}
+.home-loan .right img{width:100%;height:400px;object-fit:cover;border-radius:12px}
+.home-loan h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.3;margin-bottom:25px}
+.home-loan h2 em{font-style:italic;color:var(--orange)}
+.loan-features{list-style:none}
+.loan-features li{display:flex;align-items:flex-start;gap:12px;margin-bottom:15px;font-size:15px;color:#555;line-height:1.6}
+.loan-features li i{color:var(--orange);font-size:18px;margin-top:3px}
+/* HAPPY FAMILIES */
+.happy-families{padding:80px 0;background:var(--light-gray)}
+.happy-families .container{display:flex;gap:60px;align-items:center}
+.stats-side{flex:1;display:flex;gap:40px;justify-content:center}
+.stat-circle{text-align:center}
+.circle-progress{position:relative;width:160px;height:160px}
+.circle-progress svg{transform:rotate(-90deg)}
+.circle-progress .bg{fill:none;stroke:#e0e0e0;stroke-width:8}
+.circle-progress .fg{fill:none;stroke:var(--orange);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.5s ease}
+.circle-progress .value{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:var(--dark)}
+.circle-progress .value small{font-size:12px;font-weight:400;color:#888;margin-top:4px}
+.testimonial-side{flex:1}
+.testimonial-side blockquote{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;line-height:1.7;color:#555;margin-bottom:20px;border-left:3px solid var(--orange);padding-left:20px}
+.testimonial-side .author{display:flex;align-items:center;gap:15px}
+.testimonial-side .author img{width:55px;height:55px;border-radius:50%;object-fit:cover}
+.testimonial-side .author strong{font-size:15px}
+.testimonial-side .author span{font-size:13px;color:#888}
+/* BLOG/RESOURCES */
+.resources{padding:80px 0;background:var(--white)}
+.resources .header{text-align:center;margin-bottom:50px}
+.resources h2{font-family:'Playfair Display',serif;font-size:38px}
+.resources h2 em{font-style:italic;color:var(--orange)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.blog-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .3s}
+.blog-card:hover{transform:translateY(-6px)}
+.blog-card img{width:100%;height:200px;object-fit:cover}
+.blog-card .content{padding:20px}
+.blog-card .date{color:#aaa;font-size:12px;margin-bottom:8px}
+.blog-card h4{font-size:16px;font-weight:600;margin-bottom:10px;line-height:1.4}
+.blog-card .read-more{color:var(--orange);font-size:13px;font-weight:600}
+/* PARTNERS */
+.partners{padding:70px 0;background:var(--navy);color:#fff;text-align:center}
+.partners h2{font-family:'Playfair Display',serif;font-size:36px;margin-bottom:40px}
+.partners h2 em{font-style:italic;color:var(--orange)}
+.partner-logos{display:flex;justify-content:center;align-items:center;gap:50px;flex-wrap:wrap;opacity:.85}
+.partner-logos .partner{background:rgba(255,255,255,.1);padding:15px 30px;border-radius:8px;font-size:14px;font-weight:600;letter-spacing:1px;color:#ccc}
+/* FOOTER */
+footer{background:var(--dark);color:#ccc;padding:60px 0 0}
+footer .container{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px}
+footer h4{color:#fff;font-size:16px;margin-bottom:20px;position:relative;padding-bottom:10px}
+footer h4::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--orange)}
+footer p,footer li{font-size:14px;line-height:1.8;color:#999}
+footer ul{list-style:none}
+footer ul li a{transition:color .3s}
+footer ul li a:hover{color:var(--orange)}
+footer .contact-info p{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+footer .contact-info i{color:var(--orange);margin-top:4px}
+.footer-bottom{margin-top:40px;padding:20px 0;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:13px;color:#666}
+.footer-bottom a{color:var(--orange)}
+/* ANIMATIONS */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.animate{opacity:0;transform:translateY(30px);transition:all .8s ease}
+.animate.show{opacity:1;transform:translateY(0)}
+/* RESPONSIVE */
+@media(max-width:768px){
+.top-bar .container{flex-direction:column;gap:5px;text-align:center}
+.navbar .container{flex-wrap:wrap;gap:10px}
+.nav-links{display:none}
+.hero{height:450px}
+.hero-content{padding-left:20px}
+.hero-content h1{font-size:32px}
+.hero-tabs{flex-direction:column}
+.turning-dreams .container,.affordable .container,.delivery .container,.home-loan .container,.happy-families .container{flex-direction:column}
+.projects-grid,.blog-grid{grid-template-columns:1fr}
+.affordable .right{grid-template-columns:1fr 1fr}
+footer .container{grid-template-columns:1fr}
+.stats-side{flex-direction:column;align-items:center}
+.partner-logos{gap:25px}
+}
+</style>
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar"><div class="container">
+<span><i class="fas fa-envelope" style="color:#F26522;margin-right:6px"></i> info@omcon.in</span>
+<span><i class="fas fa-clock" style="color:#F26522;margin-right:6px"></i> Mon - Sun: 10:00 AM - 07:00 PM</span>
+<div class="social"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+</div></div>
+
+<!-- NAVBAR -->
+<nav class="navbar"><div class="container">
+<a href="#" class="logo"><span>OM</span>CON<small>Real Estate Developers</small></a>
+<ul class="nav-links">
+<li><a href="#">HOME</a></li>
+<li><a href="#">PROJECTS <i class="fas fa-chevron-down" style="font-size:10px"></i></a></li>
+<li><a href="#">ABOUT US</a></li>
+<li><a href="#">MORE <i class="fas fa-chevron-down" style="font-size:10px"></i></a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:20px">
+<a href="tel:+919594713555" class="nav-phone"><i class="fas fa-phone" style="color:#F26522;margin-right:6px"></i>+91-9594-713-555</a>
+<button class="btn-enquiry">Enquiry Now</button>
+</div>
+</div></nav>
+
+<!-- HERO -->
+<section class="hero"><div class="hero-content">
+<h1>Building Dreams, Building Homes For <em>1st Time Home Owners</em></h1>
+<div class="hero-tabs">
+<div class="tab active"><i class="fas fa-map-marker-alt"></i> Our Location</div>
+<div class="tab"><i class="fas fa-building"></i> Easy P. Lending</div>
+<div class="tab"><i class="fas fa-key"></i> 0 Brokerage</div>
+</div>
+</div></section>
+
+<!-- TURNING DREAMS -->
+<section class="turning-dreams animate"><div class="container">
+<div class="left">
+<div class="section-label">Our Mission</div>
+<h2>OMCON Turning <em>Dreams Into Houses</em></h2>
+<p>OMCON Real Estate Developers is committed to turning your dream of owning a home into reality. With a focus on quality construction, transparent pricing, and timely delivery, we build homes that families love. Whether you're a first-time homeowner or looking to upgrade, OMCON is your trusted partner in finding the perfect property.</p>
+</div>
+<div class="right" style="text-align:center">
+<img src="images/hero_couple.png" alt="Happy couple" style="border-radius:12px;max-height:350px;margin:0 auto">
+<div class="contact-pill"><i class="fas fa-phone-alt"></i> Contact Us: <span>+91-9594-713-555</span></div>
+</div>
+</div></section>
+
+<!-- FEATURED PROJECTS -->
+<section class="featured animate"><div class="container">
+<div class="header"><div class="section-label" style="justify-content:center">Featured Project</div>
+<h2>Discover Our Premier <em>Properties</em></h2></div>
+<div class="projects-grid">
+<div class="project-card"><img src="images/property1.png" alt="Om Aariv">
+<div class="info"><span class="type">Residences</span><h3>Om Aariv</h3>
+<p class="address"><i class="fas fa-map-marker-alt"></i> PLOT NO - 70, Sector 06, Karanjade</p></div></div>
+<div class="project-card"><img src="images/property2.png" alt="Om Sadashiv">
+<div class="info"><span class="type">Residences</span><h3>Om Sadashiv</h3>
+<p class="address"><i class="fas fa-map-marker-alt"></i> PLOT NO - A 108 b, Sector 06, Karanjade</p></div></div>
+<div class="project-card"><img src="images/property3.png" alt="Om Aaikya">
+<div class="info"><span class="type">Residences / Commercial</span><h3>Om Aaikya</h3>
+<p class="address"><i class="fas fa-map-marker-alt"></i> PLOT NO - 137, Sector 04, Karanjade</p></div></div>
+</div>
+</div></section>
+
+<!-- AFFORDABLE PRICING -->
+<section class="affordable animate"><div class="container">
+<div class="left"><div class="section-label">Affordable Pricing</div>
+<h2>Discover Affordable Homes with <em>Transparent Pricing</em></h2>
+<p>We believe everyone deserves a quality home at a fair price. OMCON offers competitively priced properties with no hidden costs, ensuring complete transparency throughout the buying process.</p></div>
+<div class="right">
+<div class="feature-box"><i class="fas fa-bed"></i><h4>Total Rooms</h4><span>1 or 2</span></div>
+<div class="feature-box"><i class="fas fa-shopping-cart"></i><h4>Near By Shop</h4><span>Yes</span></div>
+<div class="feature-box"><i class="fas fa-building"></i><h4>Accommodation</h4><span>All Amenities</span></div>
+<div class="feature-box"><i class="fas fa-car"></i><h4>Parking</h4><span>Yes</span></div>
+</div>
+</div></section>
+
+<!-- ON-TIME DELIVERY -->
+<section class="delivery animate"><div class="container">
+<div class="img-side"><img src="images/property1.png" alt="Building"></div>
+<div class="text-side"><div class="section-label">Our Promise</div>
+<h2>On-Time Delivery – Our Promise of <em>Timely Possession</em></h2>
+<p>At OMCON, we understand the importance of timely possession. Our commitment to on-time delivery ensures that you can plan your move with confidence. We follow strict project timelines and maintain transparency at every stage of construction, so you always know where your home stands.</p>
+<a href="#" class="btn-explore">Explore Now <i class="fas fa-arrow-right"></i></a></div>
+</div></section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner animate"><div class="container">
+<h3>Join Our Happy Homeowners – <strong>Connect With OMCON And Book A FREE Tour</strong></h3>
+<button class="btn-tour">Book A Free Tour</button>
+</div></div>
+
+<!-- HOME LOAN -->
+<section class="home-loan animate"><div class="container">
+<div class="left"><div class="section-label">Home Loan Guidance</div>
+<h2>Complete Guidance For Securing <em>Your Home Loan</em></h2>
+<ul class="loan-features">
+<li><i class="fas fa-check-circle"></i> Secure your dream home with tailor-made loan choices that fit your budget</li>
+<li><i class="fas fa-check-circle"></i> Our experts guide you through every step of the home loan process</li>
+<li><i class="fas fa-check-circle"></i> Partnered with leading banks for the best interest rates</li>
+<li><i class="fas fa-check-circle"></i> Quick approvals and hassle-free documentation process</li>
+</ul></div>
+<div class="right"><img src="images/family_consultation.png" alt="Home loan consultation"></div>
+</div></section>
+
+<!-- HAPPY FAMILIES -->
+<section class="happy-families animate"><div class="container">
+<div class="stats-side">
+<div class="stat-circle"><div class="circle-progress"><svg width="160" height="160"><circle class="bg" cx="80" cy="80" r="70"/><circle class="fg" cx="80" cy="80" r="70" stroke-dasharray="440" stroke-dashoffset="4.4"/></svg><div class="value">99%<small>Satisfied Families</small></div></div></div>
+<div class="stat-circle"><div class="circle-progress"><svg width="160" height="160"><circle class="bg" cx="80" cy="80" r="70"/><circle class="fg" cx="80" cy="80" r="70" stroke-dasharray="440" stroke-dashoffset="132"/></svg><div class="value">70%<small>1st Time Buyers</small></div></div></div>
+</div>
+<div class="testimonial-side">
+<h2 style="font-family:'Playfair Display',serif;font-size:30px;margin-bottom:20px">450+ Happy Families Found Their First Home <em style="color:#F26522">With OMCON</em></h2>
+<blockquote>"Real estate agents aid buyers by identifying suitable properties, negotiating deals, and navigating the complex process. OMCON made our dream of owning a home a reality with their transparent approach."</blockquote>
+<div class="author"><img src="images/happy_family.png" alt="Mr and Mrs Patil"><div><strong>Mr and Mrs Patil</strong><br><span>Happy Homeowners</span></div></div>
+</div>
+</div></section>
+
+<!-- LATEST RESOURCES -->
+<section class="resources animate"><div class="container">
+<div class="header"><div class="section-label" style="justify-content:center">Latest Updates</div>
+<h2>Latest <em>Resources</em></h2></div>
+<div class="blog-grid">
+<div class="blog-card"><img src="images/blog_property.png" alt="Blog"><div class="content"><p class="date"><i class="fas fa-calendar-alt" style="margin-right:5px"></i> January 15, 2024</p><h4>Renting vs. Owning: The Long-Term Benefits of Buying Your First Home</h4><a href="#" class="read-more">Read More <i class="fas fa-arrow-right" style="font-size:11px"></i></a></div></div>
+<div class="blog-card"><img src="images/property2.png" alt="Blog"><div class="content"><p class="date"><i class="fas fa-calendar-alt" style="margin-right:5px"></i> February 08, 2024</p><h4>Why Investing in Karanjade Real Estate is a Smart Choice in 2024</h4><a href="#" class="read-more">Read More <i class="fas fa-arrow-right" style="font-size:11px"></i></a></div></div>
+<div class="blog-card"><img src="images/property3.png" alt="Blog"><div class="content"><p class="date"><i class="fas fa-calendar-alt" style="margin-right:5px"></i> March 22, 2024</p><h4>Understanding Home Loans: A Complete Guide for First-Time Buyers</h4><a href="#" class="read-more">Read More <i class="fas fa-arrow-right" style="font-size:11px"></i></a></div></div>
+</div>
+</div></section>
+
+<!-- PARTNERS -->
+<section class="partners animate"><div class="container">
+<h2>Empowering Business <em>Relationships</em></h2>
+<div class="partner-logos">
+<div class="partner"><i class="fas fa-drafting-compass" style="margin-right:8px;color:#F26522"></i>Destination Architecture</div>
+<div class="partner"><i class="fas fa-university" style="margin-right:8px;color:#F26522"></i>Axis Bank</div>
+<div class="partner"><i class="fas fa-home" style="margin-right:8px;color:#F26522"></i>GIC Housing Finance</div>
+<div class="partner"><i class="fas fa-university" style="margin-right:8px;color:#F26522"></i>HDFC Bank</div>
+<div class="partner"><i class="fas fa-chart-line" style="margin-right:8px;color:#F26522"></i>Inventors Realty</div>
+</div>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="container">
+<div><h4>OMCON Real Estate</h4><p>Building dreams into reality since inception. OMCON is committed to creating quality homes for first-time homeowners with transparency, integrity, and timely delivery at its core.</p>
+<div style="margin-top:20px;display:flex;gap:12px"><a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#ccc;transition:background .3s"><i class="fab fa-facebook-f"></i></a><a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#ccc;transition:background .3s"><i class="fab fa-instagram"></i></a><a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#ccc;transition:background .3s"><i class="fab fa-linkedin-in"></i></a></div></div>
+<div><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Projects</a></li><li><a href="#">Contact</a></li><li><a href="#">Blog</a></li></ul></div>
+<div><h4>Our Projects</h4><ul><li><a href="#">Om Aariv</a></li><li><a href="#">Om Sadashiv</a></li><li><a href="#">Om Aaikya</a></li></ul></div>
+<div class="contact-info"><h4>Contact Us</h4>
+<p><i class="fas fa-map-marker-alt"></i> Office No. 01, Sector 06, Karanjade, Panvel, Navi Mumbai - 410206</p>
+<p><i class="fas fa-envelope"></i> info@omcon.in</p>
+<p><i class="fas fa-phone-alt"></i> +91-9594-713-555</p></div>
+</div>
+<div class="footer-bottom"><div class="container">Copyright &copy; 2024 Omcon. Designed By <a href="#">Digital Nawab</a></div></div>
+</footer>
+
+<script>
+// Scroll animation observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); observer.unobserve(e.target); }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); });
+});
+</script>
+</body>
+</html>
